@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding-block: .5rem;
+  padding-inline: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.header {
+  /* display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 6rem; */
+  display: grid;
+  gap: 4rem;
+  margin-top: 6rem;
+}
+
+.heading-secondary {
+  font-family: 'PT Serif', serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  max-width: 55ch;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 6.4rem;
+  align-self: center;
+  margin: 10rem 0;
+}
+
+.person {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.person:nth-child(even) {
+  transform: translateY(3.2rem);
+}
+
+
+.img-container {
+  display: inline-block;
+  margin-inline-end: .5rem;
+}
+
+.person-img {
+  display: block;
+  width: calc(14rem + 2vw);
+  margin-bottom: .5rem;
+}
+
+.person-name {
+  /* display: block; */
+}
+
+.person-job {
+  font-family: "PT Serif", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.4;
+  text-align: center;
+  color: #a9a9a9;
+}
+
+@media screen and (min-width: 57.5em) {
+
+  .header {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 0;
+  }
+
+  .text {
+    font-size: 1.8rem;
+    max-width: 33ch;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 12rem auto;
+  }
+
+  .person:nth-child(even) {
+    transform: translateY(0);
+  }
+
+  .person:nth-child(3n + 2) {
+    transform: translateY(6.4rem);
+  }
+
+  .person-img {
+    width: 16rem;
+  }
+
+  .person-name {
+    font-size: 1.8rem;
+  }
+
+  .person-job {
+    font-size: 1.2rem;
+  }
+}
